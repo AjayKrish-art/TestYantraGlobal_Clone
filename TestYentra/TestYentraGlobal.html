@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sora', sans-serif;
+            font-size: 15px;
+        }
+        
+        /* Header */
+        header{
+            height: 35px;
+            width: 100%;
+            background: #ED7501;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            z-index: 1;
+        }
+        .header-left{
+            height: 100%;
+            width: 600px;
+            display: flex;
+            align-items: center;
+        }
+        .header-left i{
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        .header-right{
+            height: 100%;
+            width: 600px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .header-right i{
+            margin-left: 20px;
+            font-size: 1.3em;
+        }
+
+        /* Navbar */
+        .navbar{
+            height: 90px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navcontent{
+            height: 100%;
+            width: 700px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navanchors{
+            height: 40px;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .navanchors a{
+            text-decoration: none;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.12em;
+        }
+        .navanchors:hover > a{
+            color: white;
+        }
+        .navanchors:hover{
+            background-color: #EA751C;
+            box-shadow: 0px 0px 5px black;
+        }
+
+        .navanchors::after{
+            content: '';
+            width: 30%;
+            height: 4%;
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            background-color: rgb(0, 0, 0);
+            position: relative;
+            top: 3px; */
+            background-color: #181818;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .navanchors:hover::after{
+            transform: scaleX(1);
+            background-color: white;
+        }
+        .navsearch{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navsearch i{
+            font-size: 1.3em;
+            position: relative;
+            left: -50px;
+            cursor: pointer;
+        }
+
+
+        /* image */
+        .image{
+            position: relative;
+            background-color: black;
+            height: 700px;
+            width: 100%;
+        }
+        .img1{
+            animation: anime 1s linear 1 forwards;
+            position: absolute;
+            top: 100px;
+        }
+        .img2{
+            position: absolute;
+            right: 0px;
+            top: 100px;
+            animation: anime 1s linear 1 forwards;
+        }
+        .img3{
+            position: absolute;
+            top: -100px;
+            right: 500px;
+            animation: anime 1s linear 1 forwards;
+        }
+        @keyframes anime {
+            from{
+                transform: translateY(0);
+            }
+            to{
+                transform: translateY(55px);
+            }
+        }
+        .imagecontent{
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .imagecontent h2{
+            font-size: 3em;
+        }
+        .imagecontent h1{
+            position: relative;
+            left: 140px;
+            font-size: 6.7em;
+        }
+        .imagecontent p{
+            position: relative;
+            left: 160px;
+            font-size: 1.5em;
+        }
+        .svgclass{
+            position: absolute;
+            top: 540px;
+        }
+
+       /* stickyclass */
+        .stickyclass{
+            height: 1200px;
+            width: 100%;
+            display: flex;
+            background-color: #F0EDD4;
+            /* background-image: url(../Images/asset\ 13.png); */
+            background-size: cover;
+        }   
+        .stickyclassleftcontent{
+            height: 100%;
+            width: 500px;
+            padding-top: 80px;
+            padding-left: 50px;
+            padding-right: 50px;
+            position: relative;
+            left: 70px;
+        }
+        .stickyclassleftcontent h2{
+            font-size: 44px;
+            margin-bottom: 40px;
+        }
+        .stickyclassleftcontent p{
+            font-family: 16px;
+            margin-bottom: 20px;
+           color: #181818;
+
+        }
+        .stickyclassleftcontent li a{
+            display: inline-block;
+            font-family: 16px;
+            text-decoration: none;
+            margin-top: 10px;
+           margin-left: 20px;
+           color: #181818;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .stickyclassright1content{
+            display: flex;
+            flex-direction: column;
+            width: 306px;
+            height: 989px;
+            margin-top: 100px;
+            margin-left: 60px;
+        }
+        .stickyclassright1content{
+            display: flex;
+            flex-direction: column;
+        }
+        .stickyclassright11content{
+            height: 500px;
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 70px;
+            margin-left: 100px;
+            border-radius: 10px;
+        }
+        .stickyclassright11content img{
+            height: 200px;
+            width: 400px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: all 0.5s ease-in-out;
+        }
+        .stickyclassright11content img:hover{
+            transform: scale(1.03);
+            transition: all 0.5s ease-in-out;
+        }
+        .content{
+            width: 100%;
+            height: 242px;
+            padding: 24px;
+            background: #FFFFFF;
+            margin-top: -10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .content h2{
+            color: #181818;
+        }
+        .content p{
+            font-size: 14px;
+            line-height: 1.5;
+            color: #181818;
+            margin-top: 15px;
+        }
+        .content h3 a{
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 30px;
+            color: #ED7501;
+            font-size: 13px;
+        }
+
+        /* ------- */
+         .stickyclassright2content{
+            display: flex;
+            flex-direction: column;
+        }
+        .stickyclassright21content{
+            height: 400px;
+            width: 300px;
+            overflow: hidden;
+            margin-bottom: 70px;
+            margin-left: 200px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .stickyclassright21content img{
+            height: 200px;
+            width: 400px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: all 0.5s ease-in-out;
+        }
+        .stickyclassright21content img:hover{
+            transform: scale(1.03);
+            transition: all 0.5s ease-in-out;
+        }
+        .content2{
+            width: 100%;
+            height: 242px;
+            padding: 24px;
+            background: #FFFFFF;
+            margin-top: -10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .content2 h2{
+            color: #181818;
+        }
+        .content2 p{
+            font-size: 14px;
+            line-height: 1.5;
+            color: #181818;
+            margin-top: 15px;
+        }
+        .content2 h3 a{
+            display: inline-block;
+            margin-top: 30px;
+            color: #ED7501;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        /* svg2 */
+        .svg2{
+            position: absolute;
+            top: 1700px;
+            z-index: 0;
+
+        }
+        /* video */
+        .video{
+            height: 100%;
+            width: 100%;
+            padding: 20px 100px 60px 100px;
+            display: flex;
+            justify-content: space-around;
+            background-image: url(./Images/asset\ 13.png);
+            background-size: cover;
+        }
+        .video video{
+            height: 450px;
+            width: 60%;
+            border: none;
+            border-radius: 10px;
+        }
+        .videocontent{
+            height: 300px;
+            width: 400px;
+            padding: 50px 20px;
+        }
+        .videocontent h2{
+            color: #EA751C;
+            margin-bottom: 30px;
+            font-size: 34px;
+        }
+        .videocontent p{
+            font-size: 16px;
+            color: #181818;
+            line-height: 1.5;
+        }
+
+        /* JS */
+        .JS{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            background-image: url(../Images/asset\ 13.png);
+            background-size: cover;
+        }
+        .JS h1{
+            text-align: center;
+            color: #181818;
+            font-size: 44px;
+            position: relative;
+            top: 20px;
+            margin: 50px;
+        }
+        .JS img{
+            height: 400px;
+            width: 300px;
+        }
+
+        /* JSnext */
+       .JSnext{
+        padding: 30px 70px;
+        display: flex;
+       }
+       .next{
+        height: 500px;
+        width: 500px;
+        overflow: hidden;
+       
+       }
+       .next img{
+        height: 300px;
+        width: 500px;
+      }
+       .next1{
+        height: 500px;
+        width: 500px;
+        overflow: hidden;
+       }
+      .next1 img{
+        height: 300px;
+        width: 500px;
+      }
+       .next1{
+        display: inline-block;
+        border-radius: 10px;
+       }
+       .next1 img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        z-index: 3;
+       }
+       .next{
+        display: inline-block;
+        border-radius: 10px;
+        margin-left: 70px;
+        margin-right: 70px;
+       }
+       .next img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+       }
+       .next img:hover{
+        transform: scale(1.03);
+        transition: all 0.5s ease-in-out;
+       }
+       .next1 img:hover{
+        transform: scale(1.03);
+        transition: all 0.5s ease-in-out;
+
+       }
+       .next1content{
+        padding: 20px 90px 10px 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-top: -5px;
+        position: relative;
+        z-index: 1;
+        background-color: rgba(230, 230, 230, 0.612);
+       }
+       .next1content h3{
+        margin-top: 10px;
+        margin-bottom: 30px;
+       }
+       .next1content p{
+        color: #181818;
+       }
+
+      .btndiv{
+        height: 200px;
+        width: 100%;
+        padding: 80px 650px;
+        z-index: 1;
+      }
+      .btndiv button{
+        /* display: inline-block; */
+        height: 50px;
+        width: 200px;
+        border-radius: 30px;
+        border: 2px solid #EA751C;
+        font-size: 1em;
+        color: #EA751C;
+        position: relative;
+        top: -100;
+        cursor: pointer;
+      }
+      .btndiv button:hover{
+        background-color: #EA751C;
+        color: #F0EDD4;
+      }
+      .svg3{
+        margin-top: -400px;
+        z-index: 0;
+      }
+
+      /* beforefooter */
+      .beforefooter{
+        height: 700px;
+        width: 100%;
+        background-color: rgba(205, 202, 202, 0.5);
+        margin-top: -4px;
+      }
+      .subscribe{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 900px;
+        /* background-color: #EA751C; */
+        margin-left: 400px;
+      }
+      .subscribe h2{
+        font-size: 2em;
+        font-weight: 500;
+        position: relative;
+        left: -150px;
+      }
+      .subinput input{
+        height: 50px;
+        display: inline-block;
+        width: 310px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        padding: 20px;
+        font-size: 1.2em;
+      }
+      .subinput{
+        display: flex;
+      }
+      .subscribe button{
+        position: relative;
+        right: 190px;
+        padding: 10px 20px;
+        height: 50px;
+        /* width: 200px; */
+        border-radius: 20px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 2s ease;
+    }
+    .subscribe button:hover{
+        color: black;
+        background-color: rgba(205, 202, 202, 0.5);
+    }
+    .subscribe input:focus ~ button{
+        transform: translateX(150px);
+    }
+    /* ------------ */
+    .grid{
+        display: flex;
+        margin: 170px 50px;
+    }
+    .yentraimg{
+        margin-right: 100px;
+    }
+    .contentgrid{
+        display: flex;
+        margin-left: 70px;
+    }
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+    .home1 h3{
+        margin-bottom: 20px;
+    }
+    .home1 a{
+        display: block;
+        line-height: 2;
+        text-decoration: none;
+        color: #181818;
+    }
+    .grid a:hover{
+        color: rgba(138, 128, 128, 0.927);
+        text-decoration: none;
+    }
+    #hov:hover{
+        text-decoration: underline;
+    }
+    .industies h3{
+        margin-bottom: 15px;
+    }
+    .industies{
+        margin-left: 70px;
+    }
+    .industies a{
+        display: block;
+        line-height: 2.4;
+        text-decoration: none;
+        color: #181818;
+    }
+    .home1{
+        margin-bottom: 30px;
+    }
+
+    .logos{
+        margin-left: 60px;
+    }
+    .logos i{
+        font-size: 2em;
+        margin-top: 20px;
+        margin-left: 5px;
+        cursor: pointer;
+        padding: 5px;
+    }
+    .logos i:hover{
+        background-color: #EA751C;
+        border-radius: 50%;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact i{
+        font-size: 1.1em;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .contact a{
+        text-decoration: none;
+        color: #181818;
+    }
+    .contact a:hover{
+        text-decoration: underline;
+    }
+    /* Footer */
+    footer{
+        height: 70px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .leftfooter p{
+        color: white;
+    }
+    .rightfooter a{
+        color: white;
+        margin-right: 50px;
+    }
+    #abs{
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        height: 60px;
+        width: 100%;
+        background: rgb(8, 46, 69);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #abs p{
+        display: inline-block;
+        font-size: 0.9em;
+        letter-spacing: 0.01em;
+        margin-right: 20px;
+        color: white;
+    }
+    #absbtn1{
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background: linear-gradient(to left,rgba(255, 166, 0, 0.826),rgba(255, 217, 0, 0.799));
+    }
+    #absbtn2{
+        padding: 10px;
+        background-image: url(../Images/close-button.png);
+        background-size: 100%;
+        margin-left: 50px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    /* scirpt */
+    .jscode{
+        height: 200px;
+        width: 200px;
+        border: 5px solid black;
+        margin-right: 20px;
+        position: relative;
+    }
+    .js{
+        display: flex;
+    }
+    .jscode span{
+       position: absolute;
+       top: 30px;
+       left: 80px;
+       font-size: 4em;
+    }
+    .jscode h4{
+        position: absolute;
+        top: 130px;
+        left: 10px;
+    }
+    .counter-container{
+        display: flex;
+    }
+    #asset12 {
+        height: 700px;
+        width: 100%;
+    }
+    #hello{
+        /* display: inline-block; */
+        text-decoration: none;
+        overflow: hidden;
+        color: orange;
+        font-size: 0.8em;
+    }
+    /* .JSnext{
+        position: relative;
+        z-index: 10000;
+    } */
+    </style>
+
+</head>
+
+<body>
+
+
+   <header>
+        <div class="header-left">
+            <i class='bx bx-envelope'></i>
+            <p>hello@testyantraglobal.com</p>
+        </div>
+        <div class="header-right">
+            <i class='bx bxl-facebook'></i>
+            <i class='bx bxl-twitter' ></i>
+            <i class='bx bxl-instagram' ></i>
+            <i class='bx bxl-linkedin' ></i>
+        </div>
+   </header>
+
+   <nav class="navbar">
+        <div class="navimage">
+            <img src="./Images/logo_testyantra_global.png" alt="">
+        </div>
+
+        <div class="navcontent">
+            <div class="navanchors">
+                <a href="">Home</a>
+            </div>
+            <div class="navanchors">
+                <a href="">Services</a>
+            </div>
+            <div class="navanchors">
+                <a href="">Products</a>
+            </div>
+            <div class="navanchors">
+                <a href="">Industries</a>
+            </div>
+            <div class="navanchors">
+                <a href="">Blogs</a>
+            </div>
+            <div class="navanchors">
+                <a href="">About</a>
+            </div>
+        </div>
+   </nav>
+
+   <section class="image">
+        <img id="asset12" src="./Images/asset 12.jpeg" alt="">
+        <div class="img1">
+            <img src="./Images/TestYentra1.png" alt="">
+        </div>
+        <div class="img2">
+            <img src="./Images/TestYentra2.png" alt="">
+        </div>
+        <div class="img3">
+            <img src="./Images/TestYentra3.png" alt="">
+        </div>
+        <div class="imagecontent">
+            <h2>Enabling the Digital</h2>
+            <h1>Transformation</h1>
+            <p>Test Yantra Global provides a range of innovative technology solutions to digitally transform your organization.</p>
+        </div>
+   </section>
+
+   <svg class="svgclass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#F0EDD4" fill-opacity="1" d="M0,256L60,234.7C120,213,240,171,360,144C480,117,600,107,720,122.7C840,139,960,181,1080,176C1200,171,1320,117,1380,90.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+  </svg>
+
+
+
+
+    <section class="stickyclass">
+        <div class="stickyclassleftcontent">
+            <h2>Our Services & Industries</h2>
+            <p>We provide industry-specific services and solutions expertise to Global brands across a range of verticals.</p>
+            <p>Some of the industries that we have worked with are:</p>
+            <ul>
+                <li><i class='bx bxs-navigation'></i><a href="">Banking and Finance</a></li>
+                <li><i class='bx bxs-navigation'></i><a href="">Insurance</a></li>
+                <li><i class='bx bxs-navigation'></i><a href="">Retail and e-commerce</a></li>
+                <li><i class='bx bxs-navigation'></i><a href="">Healthcare</a></li>
+                <li><i class='bx bxs-navigation'></i><a href="">Information, Communication, Technology (ICT)</a></li>
+                <li><i class='bx bxs-navigation'></i><a href="">Education</a></li>
+                <li><i class='bx bxs-navigation'></i><a href="">Travel</a></li>
+                <li><i class='bx bxs-navigation'></i><a href="">Media and Entertainment</a></li>
+
+            </ul>
+        </div>
+        <div class="stickyclassright1content">
+            <div class="stickyclassright11content">
+                <img src="https://testyantraglobal.com/wp-content/uploads/2018/09/portfolio_01-1280x960.jpg" alt="">
+                <div class="content">
+                    <h2>Software Design and Development</h2>
+                    <p>We deliver IT solutions in a wide variety of verticals and elevate businesses to the next level.</p>
+                    <h3><a href="">READ MORE</a></h3>
+                </div>
+            </div>
+            <div class="stickyclassright11content">
+                <img src="https://testyantraglobal.com/wp-content/uploads/2022/03/training_01-1280x960.jpg" alt="">
+                <div class="content">
+                    <h2>Elevate IT - IT Skills Development</h2>
+                    <p>Our customized and curated training models help organizations elevate their IT quotient.</p>
+                    <h3><a href="">READ MORE</a></h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="stickyclassright2content">
+            <div class="stickyclassright21content">
+                <img src="https://testyantraglobal.com/wp-content/uploads/2018/09/post_07-1280x960.jpg" alt="">
+                <div class="content2">
+                    <h2>Software Testing</h2>
+                    <p>We offer cost-effective, reliable and scalable software testing services.</p>
+                    <h3><a href="">READ MORE</a></h3>
+                </div>
+            </div>
+            <div class="stickyclassright21content">
+                <img src="https://testyantraglobal.com/wp-content/uploads/2022/03/consulting-1280x960.jpg" alt="">
+                <div class="content2">
+                    <h2>IT Consulting & Managed Services</h2>
+                    <p>Our team of experts help you craft a winning IT strategy for your organization</p>
+                    <h3><a href="">READ MORE</a></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <svg class="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,64L20,74.7C40,85,80,107,120,138.7C160,171,200,213,240,208C280,203,320,149,360,133.3C400,117,440,139,480,149.3C520,160,560,160,600,181.3C640,203,680,245,720,234.7C760,224,800,160,840,138.7C880,117,920,139,960,128C1000,117,1040,75,1080,69.3C1120,64,1160,96,1200,96C1240,96,1280,64,1320,85.3C1360,107,1400,181,1420,218.7L1440,256L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path>
+    </svg>
+
+    <div class="video">
+        <video width="400" height="300" controls>
+            <source src="https://youtu.be/tuwxrL7Kh4E">
+        </video>
+        <div class="videocontent">
+            <h2>At the forefront of innovation</h2>
+            <p>Test Yantra Global provides industry leading expertise and advanced technology solution to Digitally Transform leading brands across various industries. Connect with one of our Expert Solutions Specialist to see how Test Yantra can give your organization a leading edge.</p>
+        </div>
+        
+    </div>
+
+
+    <section class="JS">
+        <h1>The numbers speak for <br>themselves</h1>
+        <div class="js">
+            <img src="./Images/floating_image_04.png" alt="">
+        </div>
+        <h1>Articles</h1>
+        <div  class="JSnext">
+            <div class="next1">
+                <img src="https://testyantraglobal.com/wp-content/uploads/2023/05/website-1500X800-1280x800.jpg" alt="">
+                <div style="background-color: #f7f7f5;" class="next1content">
+                    <p>May 16, 2023</p>
+                    <h3>One stop solution for Scriptless Automated Testing – FireFlink</h3>
+                    <h3><a href="" id="hello">READ MORE</a></h3>
+                </div>
+            </div>
+
+            <div class="next">
+                <img src="https://testyantraglobal.com/wp-content/uploads/2023/04/test-automation-Fireflink-testyantra-720x800.jpg" alt="">
+                <div class="next1content">
+                    <p>April 19, 2023</p>
+                    <h3>Test Automation Suite- Selenium , Oracle or FireFlink</h3>
+                    <h3><a href=""id="hello">READ MORE</a></h3>
+                </div>
+            </div>
+
+            <div class="next1">
+                <img src="https://testyantraglobal.com/wp-content/uploads/2023/02/Automate-Software-Testing-1280x800.jpg" alt="">
+                <div class="next1content">
+                    <p>May 16, 2023</p>
+                    <h3>One stop solution for Scriptless Automated Testing – FireFlink</h3>
+                    <h3><a href="" id="hello">READ MORE</a></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="background-image: url(../Images/asset\ 13.png); background-size: cover; " class="btndiv">
+        <button>Read more Articles</button>
+    </div>
+
+    <img style=" height: 200px; width: 100%; position: relative; bottom: 0px; z-index: -50;" src="./Images/asset 5.png" alt="">
+
+    <section style="background-color: #f7f7f5;" class="beforefooter">
+        <div class="subscribe">
+                <h2>Subscribe to our Newsletter</h2>
+            <div class="subinput">
+                <input type="text" placeholder="Your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+        <section class="grid">
+            <div class="yentraimg">
+                <img src="../Images/logo_testyantra_global.png" alt="">
+            </div>
+
+            <div class="contentgrid">
+                <div class="home">
+                    <div class="home1">
+                        <h3>Home</h3>
+                        <a id="hov" href="">About Us</a>
+                        <a id="hov" href="">Work With Us</a>
+                        <a id="hov" href="">Contact</a>
+                        <a id="hov" href="">Case Studies</a>
+                    </div>
+                    
+                    <div class="home1">
+                        <h3>Services</h3>
+                        <a id="hov" href="">Software Development</a>
+                        <a id="hov" href="">Elevate – IT training services</a>
+                        <a id="hov" href="">IT consulting</a>
+                    </div>
+                </div>
+                <div class="industies">
+                    <h3>Industries</h3>
+                    <a id="hov" href="">Banking & Finance</a>
+                    <a id="hov" href="">Insurance</a>
+                    <a id="hov" href="">Healthcare</a>
+                    <a id="hov" href="">Retail & e-commerce</a>
+                    <a id="hov" href="">Technology and Communications</a>
+                    <a id="hov" href="">Education</a>
+                    <a id="hov" href="">Travel</a>
+                    <a id="hov" href="">Media and Entertainment</a>
+                </div>
+            </div>
+
+            <div class="logos">
+                <h3>Connect</h3>
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-twitter'></i>
+                <i class='bx bxl-instagram-alt' ></i>
+                <i class='bx bxl-linkedin-square' ></i>
+                <div class="contact">
+                    <p><i class='bx bxs-phone' ></i><a href="">Ph: +1 888 980 7010</a></p>
+                    <p><i class='bx bxs-envelope' ></i><a href="">hello@testyantraglobal.com</a></p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="leftfooter">
+            <p>©2022 Test Yantra Global. All rights reserved</p>
+        </div>
+
+        <div class="rightfooter">
+            <a href="">Privacy Policy</a>
+            <a href="">Cookie Policy</a>
+        </div>
+    </footer>
+
+    <section id="abs">
+        <p>We use cookies on this website to improve functionality and performance, to analyse traffic to the website. By continuing to use this website, you consent to our use of cookies.</p>
+        <button id="absbtn1">Accept Cookies</button>
+        <button id="absbtn2" onclick="hideShow()"></button>
+    </section>
+
+    <script>
+        // --------------------------------------------
+        var div = document.getElementById("abs")
+        var display = false;
+
+        function hideShow()
+        {
+            if(display === true)
+            {
+                div.style.display = "block";
+            }
+            else
+            {
+                div.style.display = "none"
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
